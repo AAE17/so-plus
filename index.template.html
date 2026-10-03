@@ -82,16 +82,29 @@
   .mock-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f1f5f9;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);font-weight:600}
   .mock-bar .d{width:10px;height:10px;border-radius:50%;background:#cbd5e1}
   .mock-bar span.f{margin-left:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .mock-body{padding:18px}
+  .mock-body{padding:14px 16px 16px}
   .mock-title{text-align:center;font-weight:800;font-size:15px}
   .mock-title small{display:block;font-weight:500;color:var(--muted);font-size:12px;margin-top:2px}
-  table.sheet{width:100%;border-collapse:collapse;margin-top:14px;font-size:12.5px}
-  table.sheet th,table.sheet td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:middle}
-  table.sheet th{background:var(--blue-50);color:var(--blue-d);font-weight:700}
-  table.sheet td.n{width:34px;text-align:center;color:var(--muted)}
-  .bar{display:block;height:8px;border-radius:4px;background:#e2e8f0}
-  .bar.s{width:60%}.bar.m{width:80%}
-  table.sheet tr.tot td{font-weight:800;background:#f8fafc}
+  /* Face Sheet replica (colours follow the template: fixed text orange, filled-in values blue) */
+  .fs{--fo:#d9620a;--fv:#2e9bbd;--px:12px;--lc:34%;margin-top:10px;border:1.5px solid #111;padding:0 var(--px) 4px;font-family:Arial,Helvetica,Inter,sans-serif;font-size:10.5px;line-height:1.4;color:var(--fo);background:#fff}
+  .fs .gj{font-family:"Noto Sans Gujarati",Inter,sans-serif}
+  .fs .b{color:var(--fv)}
+  .fs .c{text-align:center}
+  .fs-h{margin:0 calc(-1*var(--px)) 4px;padding:5px 0;border-bottom:1.5px solid #111;text-align:center;font-weight:800;font-size:15px;color:#111;text-decoration:underline;letter-spacing:.02em}
+  .fs .r{display:grid;grid-template-columns:var(--lc) 1fr;column-gap:6px;padding:2px 0;align-items:baseline}
+  .fs .v{font-size:9.5px}
+  .fs .w{padding:3px 0;font-size:10px}
+  .fs .ind{display:inline-block;padding-left:var(--lc)}
+  .fs .nw{white-space:nowrap}
+  .fs .r .gj,.fs .r.gj .b{font-size:11.5px}
+  .fs .work{padding:6px 0;font-size:11.5px;align-items:center}
+  .fs .amt{text-align:right;padding:2px 8px 2px 0}
+  .fs .fb{display:inline-block;width:26px;height:6px;border-radius:3px;background:#cfe6ee;vertical-align:middle;margin:0 2px}
+  .fs .fb.s{width:18px}.fs .fb.m{width:56px}.fs .fb.l{width:96px}.fs .fb.xl{flex:1;min-width:60px}
+  .fs-band{margin:4px calc(-1*var(--px)) 0;padding:4px 0;border-top:1.5px solid #111;border-bottom:1.5px solid #111;text-align:center;font-weight:700;text-decoration:underline}
+  .fs-row{display:flex;align-items:center;gap:12px;margin:0 calc(-1*var(--px));padding:6px var(--px);border-bottom:1.5px solid #111;font-size:11px;flex-wrap:wrap}
+  .fs-para{margin:0 calc(-1*var(--px));padding:6px var(--px);border-bottom:1.5px solid #111;font-size:9.5px;line-height:1.6;text-align:justify}
+  .fs-sign{text-align:right;padding:8px 6px 4px;line-height:1.4}
   .tabs{display:flex;gap:2px;padding:0 10px;background:#f8fafc;border-top:1px solid var(--line);overflow-x:auto}
   .tabs span{font-size:12px;font-weight:600;padding:8px 10px;color:var(--muted);white-space:nowrap;border-top:2px solid transparent}
   .tabs span.on{color:var(--teal);border-top-color:var(--teal);background:#fff}
@@ -206,6 +219,16 @@
     .login-link{display:none}
     .final-box{padding:44px 20px}
     .brand small{display:none}
+    .mock-body{padding:12px 10px 12px}
+    .fs{--px:8px;--lc:41%;font-size:9px}
+    .fs .r>span:first-child{white-space:nowrap}
+    .fs .v{font-size:8px}
+    .fs .w{font-size:8.5px}
+    .fs .fb{width:16px}
+    .fs .fb.l{width:80px}
+    .fs .r .gj,.fs .r.gj .b{font-size:10.5px}
+    .fs-row{gap:10px;font-size:10px}
+    .fs-para{font-size:8.5px}
     .feat{gap:12px}
     .feat .card{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:16px 18px}
     .feat .card .ic{grid-row:span 2}
@@ -264,21 +287,35 @@
       </ul>
     </div>
 
-    <figure class="mock" id="sample" aria-label="Illustration of a CC Road estimate workbook" style="margin:0">
+    <figure class="mock" id="sample" aria-label="Illustration of the Face Sheet of a CC Road estimate" style="margin:0">
       <div class="mock-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="f">{{sample.file_name}}</span></div>
       <div class="mock-body">
-        <div class="mock-title">{{sample.title}}<small>{{sample.subtitle}}</small></div>
-        <table class="sheet">
-          <thead><tr><th>{{sample.col_no}}</th><th>{{sample.col_item}}</th><th>{{sample.col_qty}}</th><th>{{sample.col_amount}}</th></tr></thead>
-          <tbody>
-            <tr><td class="n">1</td><td>{{sample.row_1}}</td><td><span class="bar s"></span></td><td><span class="bar m"></span></td></tr>
-            <tr><td class="n">2</td><td>{{sample.row_2}}</td><td><span class="bar s"></span></td><td><span class="bar m"></span></td></tr>
-            <tr><td class="n">3</td><td>{{sample.row_3}}</td><td><span class="bar s"></span></td><td><span class="bar m"></span></td></tr>
-            <tr><td class="n">4</td><td>{{sample.row_4}}</td><td><span class="bar s"></span></td><td><span class="bar m"></span></td></tr>
-            <tr><td class="n">5</td><td>{{sample.row_5}}</td><td><span class="bar s"></span></td><td><span class="bar m"></span></td></tr>
-            <tr class="tot"><td></td><td>{{sample.row_total}}</td><td></td><td><span class="bar m"></span></td></tr>
-          </tbody>
-        </table>
+        <div class="mock-title">{{sample.title}}</div>
+        <!-- Simplified replica of the FACE SHEET in skeleton-cc.xlsx (estimate-mvp). Labels are copied from the template; values are placeholders. -->
+        <div class="fs">
+          <div class="fs-h">ESTIMATE</div>
+          <div class="r"><span>1. Division</span><span class="v"><span class="nw">R &amp; B (P) DIVISON</span> <i class="fb"></i><i class="fb"></i> <span class="nw">JILLA PANCHAYAT.</span></span></div>
+          <div class="r"><span>2. Sub-Division</span><span class="v"><span class="nw">R &amp; B (P) SUB DIV.</span> <i class="fb"></i> <span class="nw">NANI SINCHAI OFFICE</span> <i class="fb"></i><br><span class="nw">DEE ATVT PRANT OFFICE</span></span></div>
+          <div class="r"><span>3. Sanctioned Estimate No:</span><span></span></div>
+          <div class="r"><span>4. Fund Head:</span><span class="v c b gj">{{sample.fs_fund_head}}</span></div>
+          <div class="r"><span>5. Major Head:</span><span></span></div>
+          <div class="r"><span>6. Minor Head:</span><span></span></div>
+          <div class="r"><span>7. Serviceable Head:</span><span></span></div>
+          <div class="r"><span>8. Departmental Head:</span><span></span></div>
+          <div class="w">Estimate framed in the office of the Taluka Development Officer, Taluka Panchayat, <span class="b">{{sample.fs_taluka}}</span><br>for the expense that will be incurred in the work of…</div>
+          <div class="r work gj"><span class="c">કામ નું નામ :</span><span class="b c">{{sample.fs_work_name}}</span></div>
+          <div class="amt"><strong>Amounting to Rs.</strong> <i class="fb m"></i></div>
+          <div class="w">Administrative approval No.:<br><span class="ind">Date :</span></div>
+          <div class="w">&amp; Technically sanctioned under No.:<br><span class="ind">Date:</span></div>
+          <div class="r"><span class="c">Estimate prepared by</span><span class="v"><i class="fb l"></i></span></div>
+          <div class="r"><span class="c">Estimate checked by:</span><span class="v"><i class="fb l"></i></span></div>
+          <div class="r"><span class="c">Call or Authority:</span><span></span></div>
+          <div class="fs-band">GENERAL DESCRIPTION</div>
+          <div class="fs-row gj"><span>SR. NO.</span><i class="fb s"></i><i class="fb xl"></i></div>
+          <div class="fs-row gj"><span>મોજે -</span><span class="b">{{sample.fs_village}}</span><span>મુકામે</span><span class="b">{{sample.fs_fund_head}}</span></div>
+          <p class="fs-para gj">યોજના હેઠળ સુચીત સી.સી. રસ્તાના કામ માટે ગ્રાન્ટ ની ફાળવણી કરેલ છે.આ કામ ઉપરોકત યોજનમાં મંજુર થયેલ છે.આ અંદાજપત્રકમાં બોક્સ કટિંગ, બીટી મેટલ ૪૦ થી ૬૩ મીમી, મુરમ, સી સી ૧:૨:૪, રોલિંગ તકતીની આઈટમ નો સમાવેશ કરી ચાલુ વર્ષ ના માર્ગ અને મકાન ના એ.ઓં.આર ભાવ લઇ અંદાજ તૈયાર કરેલ છે.</p>
+          <div class="fs-sign"><strong>A.A.E.</strong><br><strong>Taluka Panchayat</strong> <strong class="b">{{sample.fs_taluka}}</strong></div>
+        </div>
       </div>
       <div class="tabs" aria-hidden="true"><span class="on">{{sample.tab_1}}</span><span>{{sample.tab_2}}</span><span>{{sample.tab_3}}</span><span>{{sample.tab_4}}</span><span>{{sample.tab_5}}</span><span>{{sample.tab_6}}</span></div>
       <figcaption class="mock-cap" style="padding:0 12px 12px">{{sample.caption}}</figcaption>

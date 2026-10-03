@@ -49,24 +49,17 @@ hero.type_6: Forwarding letters
 === 3. SAMPLE PICTURE (Excel drawing next to the hero) ===
 sample.file_name: CC_Road_Estimate.xlsx
 sample.title: FACE SHEET: C.C. Road
-sample.subtitle: Taluka Panchayat · Grant Head · Year
-sample.col_no: #
-sample.col_item: Item (as per SOR)
-sample.col_qty: Qty
-sample.col_amount: Amount ₹
-sample.row_1: Box cutting / excavation
-sample.row_2: Metal 40–63 mm
-sample.row_3: Binding material
-sample.row_4: C.C. 1:2:4
-sample.row_5: Test report · Name plate
-sample.row_total: Total incl. 18% GST
+sample.fs_fund_head: ગ્રાન્ટ હેડ વર્ષ ૨૦૨૬-૨૭.
+sample.fs_taluka: XYZ
+sample.fs_work_name: XYZ ગામે સી.સી. રસ્તાનું કામ.
+sample.fs_village: XYZ
 sample.tab_1: FACE SHEET
 sample.tab_2: Abstract
 sample.tab_3: Measurement
 sample.tab_4: RA
 sample.tab_5: Lead
 sample.tab_6: Schedule
-sample.caption: Illustration of the sheets in a CC Road estimate, not real figures.
+sample.caption: Illustration of the Face Sheet in a CC Road estimate. Example values only, not real figures.
 
 === 4. WHY SO+ (problem and benefit) ===
 why.eyebrow: Why SO+
