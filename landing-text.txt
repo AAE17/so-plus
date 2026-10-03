@@ -21,7 +21,6 @@ meta.title: SO+ · CC Road, Paver Block, Gutter Line & Pipe Line estimates in mi
 meta.description: SO+ turns a short form into a ready Taluka Panchayat-format estimate for CC Road, Paver Block, Gutter Line and Pipe Line, as Excel and PDF. Built for Gujarat Taluka Panchayat AAEs.
 
 === 1. HEADER (top bar) ===
-header.brand_name: SO+
 header.brand_tagline: WORKS & ESTIMATES
 header.nav_how: How it works
 header.nav_features: Features
@@ -192,7 +191,6 @@ final.cta_primary: Sign up free for 7 days
 final.cta_secondary: Log in
 
 === 11. FOOTER ===
-footer.brand_name: SO+
 footer.brand_tagline: WORKS & ESTIMATES
 footer.nav_how: How it works
 footer.nav_features: Features

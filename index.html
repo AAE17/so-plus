@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SO+ · CC Road, Paver Block, Gutter Line &amp; Pipe Line estimates in minutes, for Gujarat Taluka Panchayat AAEs</title>
 <meta name="description" content="SO+ turns a short form into a ready Taluka Panchayat-format estimate for CC Road, Paver Block, Gutter Line and Pipe Line, as Excel and PDF. Built for Gujarat Taluka Panchayat AAEs.">
+<link rel="icon" href="assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1F3A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +20,7 @@
 -->
 <style>
   :root{
-    --blue:#1d4ed8; --blue-d:#1e3a8a; --blue-50:#eef3ff; --blue-100:#dbe6fe;
+    --navy:#0B1F3A; --blue:#2563EB; --blue-d:#1e3a8a; --blue-50:#eef3ff; --blue-100:#dbe6fe;
     --teal:#0f766e; --teal-50:#e7f6f4;
     --ink:#0f172a; --ink-2:#334155; --muted:#64748b; --line:#e2e8f0;
     --bg:#f6f8fc; --card:#ffffff; --warn:#b45309; --warn-50:#fff7ed;
@@ -52,10 +56,9 @@
   /* Header */
   header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
   .top .wrap{display:flex;align-items:center;gap:24px;height:64px}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-  .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:-.02em}
-  .brand b{font-size:19px;font-weight:800;line-height:1}
-  .brand small{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted);margin-top:3px}
+  .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+  .brand .logo{display:block;height:60px;width:auto;flex:0 0 auto;margin-left:-8px}
+  .brand small{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted);padding-left:12px;border-left:1px solid var(--line);line-height:1.3;max-width:90px}
   nav.links{display:flex;gap:22px;margin-left:auto}
   nav.links a{color:var(--ink-2);text-decoration:none;font-weight:600;font-size:15px}
   nav.links a:hover{color:var(--blue)}
@@ -193,14 +196,14 @@
   .final-box .cta-row{justify-content:center}
 
   /* Footer */
-  footer{background:#0b1220;color:#94a3b8;padding:44px 0 36px;font-size:14px}
+  footer{background:var(--navy);color:#94a3b8;padding:44px 0 36px;font-size:14px}
   footer .row{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
   footer .brand{color:#fff}
-  footer .brand small{color:#64748b}
+  footer .brand small{color:#8fa3bf;border-left-color:#22385a}
   footer nav{display:flex;flex-wrap:wrap;gap:18px}
   footer a{color:#cbd5e1;text-decoration:none}
   footer a:hover{color:#fff}
-  footer .disc{border-top:1px solid #1e293b;margin:28px 0 0;padding-top:20px;line-height:1.7}
+  footer .disc{border-top:1px solid #22385a;margin:28px 0 0;padding-top:20px;line-height:1.7}
 
   /* Responsive */
   @media (max-width:980px){
@@ -250,8 +253,8 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="SO+ home">
-      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-      <span><b>SO+</b><small>WORKS &amp; ESTIMATES</small></span>
+      <img class="logo" src="assets/so-plus-logo.svg" alt="SO+" width="96" height="60">
+      <small>WORKS &amp; ESTIMATES</small>
     </a>
     <nav class="links" aria-label="Main">
       <a href="#how">How it works</a>
@@ -549,7 +552,7 @@
 <footer>
   <div class="wrap">
     <div class="row">
-      <a class="brand" href="#top"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><span><b>SO+</b><small>WORKS &amp; ESTIMATES</small></span></a>
+      <a class="brand" href="#top" aria-label="SO+ home"><img class="logo" src="assets/so-plus-logo-reversed.svg" alt="SO+" width="96" height="60"><small>WORKS &amp; ESTIMATES</small></a>
       <nav aria-label="Footer">
         <a href="#how">How it works</a>
         <a href="#features">Features</a>
