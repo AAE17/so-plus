@@ -1,0 +1,211 @@
+# ============================================================
+# SO+ landing page: page text  (લેન્ડિંગ પેજનું લખાણ)
+#
+# નોંધ:
+#  - ફક્ત કોલન (:) પછીનું લખાણ બદલો. ડાબી બાજુની key બદલશો નહીં.
+#  - દરેક લખાણ એક જ લાઇનમાં રાખો.
+#  - ફાઇલ સાદા લખાણ (plain text, UTF-8) તરીકે જ સેવ કરો.
+#
+# Note:
+#  - Change only the text after the colon (:). Keep the keys (left side) exactly as they are.
+#  - Keep each item on one line.
+#  - Save this file as plain text (UTF-8), not Word.
+#  - *text* between two stars is shown in bold (in the headline: blue).
+#  - Lines starting with # and the === section lines are ignored.
+#
+# Rebuild the page after editing:  node apply-text.js   (run inside /workspace/so-plus-landing)
+# ============================================================
+
+=== 0. PAGE (browser tab + Google search) ===
+meta.title: SO+ · CC Road, Paver Block, Gutter Line & Pipe Line estimates in minutes, for Gujarat Taluka Panchayat AAEs
+meta.description: SO+ turns a short form into a ready Taluka Panchayat-format estimate for CC Road, Paver Block, Gutter Line and Pipe Line, as Excel and PDF. Built for Gujarat Taluka Panchayat AAEs.
+
+=== 1. HEADER (top bar) ===
+header.brand_name: SO+
+header.brand_tagline: WORKS & ESTIMATES
+header.nav_how: How it works
+header.nav_features: Features
+header.nav_outputs: Excel & PDF
+header.nav_faq: FAQ
+header.login: Log in
+header.cta: Try it free for 7 days
+
+=== 2. HERO ===
+hero.badge: For Gujarat Taluka Panchayat AAEs
+hero.headline: Government-format *CC Road, Paver Block, Gutter Line & Pipe Line* estimates in minutes
+hero.headline_more: …and many more on the way.
+hero.gujarati_line: ફોર્મ ભરો, એસ્ટિમેટ તૈયાર.
+hero.intro: Fill one short form. SO+ prepares the full estimate, with Face Sheet, Abstract, Measurement, Lead and SOR-based rates, ready to download as Excel and PDF.
+hero.cta_primary: Try it free for 7 days
+hero.cta_secondary: See a sample estimate
+hero.note: Works in your browser on phone or computer. Nothing to install.
+hero.type_1: CC Road
+hero.type_2: Paver Block
+hero.type_3: Gutter Line
+hero.type_4: Pipe Line
+hero.type_5: Bills & MB
+hero.type_6: Forwarding letters
+
+=== 3. SAMPLE PICTURE (Excel drawing next to the hero) ===
+sample.file_name: CC_Road_Estimate.xlsx
+sample.title: FACE SHEET: C.C. Road
+sample.subtitle: Taluka Panchayat · Grant Head · Year
+sample.col_no: #
+sample.col_item: Item (as per SOR)
+sample.col_qty: Qty
+sample.col_amount: Amount ₹
+sample.row_1: Box cutting / excavation
+sample.row_2: Metal 40–63 mm
+sample.row_3: Binding material
+sample.row_4: C.C. 1:2:4
+sample.row_5: Test report · Name plate
+sample.row_total: Total incl. 18% GST
+sample.tab_1: FACE SHEET
+sample.tab_2: Abstract
+sample.tab_3: Measurement
+sample.tab_4: RA
+sample.tab_5: Lead
+sample.tab_6: Schedule
+sample.caption: Illustration of the sheets in a CC Road estimate, not real figures.
+
+=== 4. WHY SO+ (problem and benefit) ===
+why.eyebrow: Why SO+
+why.headline: Stop rebuilding the same Excel for every work
+why.gujarati_line: હાથે ગણતરી અને ફોર્મેટિંગમાં સમય ન બગાડો.
+why.intro: Every CC road or paver block work means copying an old file, re-typing measurements, checking SOR rates and fixing the print layout before it goes to the office. SO+ does that part for you.
+why.before_title: The usual way
+why.before_tag: Manual
+why.before_1: Copy the last prepared Excel and clear old values by hand
+why.before_2: Look up each SOR rate and re-enter it
+why.before_3: Re-calculate quantities, totals and GST after every change
+why.before_4: Fix headings, grant head and page layout for submission
+why.before_5: Type the bill, MB and forwarding letter again from scratch
+why.after_title: With SO+
+why.after_tag: Automatic
+why.after_1: Start from a ready Taluka Panchayat-style format for each work type; you can modify it as per your need in the premium version
+why.after_2: SOR rates are already in, with item references shown
+why.after_3: Live total (with 18% GST) updates as you type measurements
+why.after_4: District, taluka, village and grant head filled in from lists
+why.after_5: Make the bill, MB and forwarding letter from the same work
+
+=== 5. HOW IT WORKS (3 steps) ===
+how.eyebrow: How it works
+how.headline: Three steps from site to submission
+how.gujarati_line: ત્રણ સરળ સ્ટેપ.
+how.step1_title: Choose the work
+how.step1_gujarati: કામ પસંદ કરો
+how.step1_text: Pick CC Road, Paver Block, Gutter Line or Pipe Line. Select district, taluka and village, then the grant head and year. Once your profile is 100% complete, your district, taluka, R&B Sub-Div., Nani Sinchai Sub-Div. and name will be printed on every estimate and bill automatically.
+how.step2_title: Enter site details
+how.step2_gujarati: માપ લખો
+how.step2_text: Type length, width and thickness (add up to 10 parts). Enter the sanctioned amount and SO+ suggests a road length that fits it.
+how.step3_title: Download Excel + PDF
+how.step3_gujarati: Excel અને PDF ડાઉનલોડ કરો
+how.step3_text: Get the complete estimate as an editable Excel file, a print-ready PDF, or both. Check it, sign it, submit it.
+
+=== 6. FEATURES (9 cards) ===
+features.eyebrow: Features
+features.headline: Everything an AAE prepares for a small work
+features.intro: From the first estimate to the final bill, in one place.
+features.1_title: 4 estimate types
+features.1_text: CC Road, Paver Block, Gutter Line (R.C.C. NP2 pipe) and Pipe Line (PVC pipe, 6 kg/cm²).
+features.2_title: SOR rates built in
+features.2_text: Items use R&B and GWSSB SOR rates (including 1% labour cess), and each item shows its SOR reference.
+features.3_title: Gujarat locations & grant heads
+features.3_text: District → taluka → village lists, plus grant heads such as 16th Finance Commission, 15% discretionary, ATVT, MP fund and DMF, written in Gujarati.
+features.4_title: Live total with GST
+features.4_text: See the estimate amount (18% GST included) change as you type. Paver Block also shows Brass.
+features.5_title: Bills & Measurement Book
+features.5_text: 21 No. P.A. Form, Bill and completion certificate, plus MB pages for all four work types, from your estimate or saved site measurements.
+features.6_title: Forwarding letters
+features.6_text: Ready letters for DEE R&B (Panchayat), DEE Nani Sinchai (Panchayat) and Audit.
+features.7_title: Site measurement
+features.7_text: Record actual site measurements with photos (GPS if allowed) and a site sketch, then print a rough bill (કાચું બિલ).
+features.8_title: Work diary
+features.8_text: Keep a simple diary of daily site visits, meetings and leave.
+features.9_title: Phone or computer
+features.9_text: Runs in the browser. Forms are in Gujarati and English, and PDFs use a Gujarati font so text prints correctly.
+
+=== 7. OUTPUT FORMATS (Excel + PDF) ===
+outputs.eyebrow: Output formats
+outputs.headline: Editable Excel. Print-ready PDF.
+outputs.gujarati_line: Excel અને PDF, બંને એક ક્લિકમાં.
+outputs.intro: Choose Excel, PDF or both. Each sheet is laid out to print on A4. Need to adjust something? Open the Excel and edit it like any other file.
+outputs.excel_badge: XLSX
+outputs.excel_title: Excel workbook
+outputs.excel_text: All sheets with formulas, so you can change a rate or quantity and the totals follow.
+outputs.pdf_badge: PDF
+outputs.pdf_title: PDF document
+outputs.pdf_text: The same sheets as a PDF, ready to print, sign and attach to your file.
+outputs.table_col1: Work type
+outputs.table_col2: Sheets in the estimate
+outputs.cc_name: CC Road
+outputs.cc_sheet_1: Face Sheet
+outputs.cc_sheet_2: Abstract
+outputs.cc_sheet_3: Measurement
+outputs.cc_sheet_4: RA
+outputs.cc_sheet_5: Lead
+outputs.cc_sheet_6: Schedule
+outputs.paver_name: Paver Block
+outputs.paver_sheet_1: Estimate
+outputs.paver_sheet_2: Abstract
+outputs.paver_sheet_3: Measurement
+outputs.paver_sheet_4: Lead
+outputs.gutter_name: Gutter Line
+outputs.gutter_sheet_1: Estimate
+outputs.gutter_sheet_2: Abstract
+outputs.gutter_sheet_3: Measurement
+outputs.gutter_sheet_4: Test-Site
+outputs.pipe_name: Pipe Line
+outputs.pipe_sheet_1: Estimate
+outputs.pipe_sheet_2: Abstract
+outputs.pipe_sheet_3: Measurement
+outputs.pipe_sheet_4: Test-Site
+outputs.bills_name: Bills
+outputs.bills_sheet_1: 21 No. P.A. Form
+outputs.bills_sheet_2: Bill
+outputs.bills_sheet_3: Completion certificate
+
+=== 8. WHO IT'S FOR ===
+who.eyebrow: Who it's for
+who.headline: Made for Taluka Panchayat AAEs in Gujarat
+who.gujarati_line: ગુજરાત પંચાયતના AAE માટે બનાવેલું.
+who.intro: SO+ is built around the daily work of Additional Assistant Engineers (Civil) in Taluka Panchayats: small road, paver, gutter and pipeline works under Finance Commission and other grants.
+who.point_1: *AAEs (Civil, Class-III)* preparing estimates and bills for village works
+who.point_2: *Section Officers and DEEs* who prepare or check the same formats
+who.point_3: *Newly joined AAEs* who want a clean, standard starting format
+who.disclaimer_box: *You stay in charge.* SO+ is a drafting and calculation aid. Always check quantities, rates and totals against the current official SOR and circulars before you submit. SO+ is an independent tool. It is not an official app of the Government of Gujarat or the Panchayat department.
+
+=== 9. FAQ ===
+faq.eyebrow: FAQ
+faq.headline: Common questions
+faq.q1: Do I need to install anything?
+faq.a1: No. SO+ runs in your browser on a phone or computer. You need an internet connection, because the Excel and PDF files are made on the SO+ server.
+faq.q2: How do I get an account?
+faq.a2: Tap *Sign up* and enter your email, a password, name, designation, mobile, district and taluka. New accounts are approved by the SO+ admin before first use.
+faq.q3: Which SOR does SO+ use?
+faq.a3: The files use R&B SOR and GWSSB SOR rates, including 1% labour cess. Each item in the Excel shows its SOR reference, so you can check it.
+faq.q4: Can I change a rate or quantity?
+faq.a4: Yes, in the downloaded Excel file. Change the value and the totals update. Rates cannot be edited inside the app yet.
+faq.q5: Is the estimate ready to submit as-is?
+faq.a5: Treat it as a strong first draft. The engineer who signs the estimate must check it against the current SOR and office requirements. Acceptance is decided by your office.
+faq.q6: Is SO+ an official government app?
+faq.a6: No. SO+ is an independent tool made to help Taluka Panchayat engineers. It is not made or endorsed by the Government of Gujarat.
+
+=== 10. FINAL CALL TO ACTION (blue box) ===
+final.headline: Make your next estimate in minutes
+final.gujarati_line: આજે જ શરૂ કરો.
+final.text: Create your account, choose a work type and download your first Excel and PDF estimate.
+final.cta_primary: Sign up free for 7 days
+final.cta_secondary: Log in
+
+=== 11. FOOTER ===
+footer.brand_name: SO+
+footer.brand_tagline: WORKS & ESTIMATES
+footer.nav_how: How it works
+footer.nav_features: Features
+footer.nav_outputs: Excel & PDF
+footer.nav_faq: FAQ
+footer.nav_privacy: Privacy
+footer.nav_terms: Terms
+footer.nav_contact: Contact
+footer.disclaimer: SO+ is an independent drafting aid for Taluka Panchayat engineers in Gujarat. It is not affiliated with, approved or endorsed by the Government of Gujarat, GPSSB, the Panchayat department, R&B or GWSSB. Rates and formats must be verified by the responsible engineer before use.
