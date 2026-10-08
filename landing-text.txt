@@ -27,7 +27,7 @@ header.nav_features: Features
 header.nav_outputs: Excel & PDF
 header.nav_faq: FAQ
 header.login: Log in
-header.cta: Try it free for 7 days
+header.cta: Try it free for 15 days
 
 === 2. HERO ===
 hero.badge: For Gujarat Taluka Panchayat AAEs
@@ -35,7 +35,7 @@ hero.headline: Government-format *CC Road, Paver Block, Gutter Line & Pipe Line*
 hero.headline_more: …and many more on the way.
 hero.gujarati_line: ફોર્મ ભરો, એસ્ટિમેટ તૈયાર.
 hero.intro: Fill one short form. SO+ prepares the full estimate, with Face Sheet, Abstract, Measurement, Lead and SOR-based rates, ready to download as Excel and PDF.
-hero.cta_primary: Try it free for 7 days
+hero.cta_primary: Try it free for 15 days
 hero.cta_secondary: See a sample estimate
 hero.note: Works in your browser on phone or computer. Nothing to install.
 hero.type_1: CC Road
@@ -187,7 +187,7 @@ faq.a6: No. SO+ is an independent tool made to help Taluka Panchayat engineers. 
 final.headline: Make your next estimate in minutes
 final.gujarati_line: આજે જ શરૂ કરો.
 final.text: Create your account, choose a work type and download your first Excel and PDF estimate.
-final.cta_primary: Sign up free for 7 days
+final.cta_primary: Sign up free for 15 days
 final.cta_secondary: Log in
 
 === 11. FOOTER ===
