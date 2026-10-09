@@ -1,7 +1,7 @@
 # SO+ landing page
 
 Public landing page for **SO+** (Works & Estimates), an estimate tool for Gujarat Taluka Panchayat AAEs.
-The app itself is at https://copilot-mvp.onrender.com.
+The app itself is at https://app.soplus.in.
 
 Live page: https://aae17.github.io/so-plus/
 
