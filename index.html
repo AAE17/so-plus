@@ -39,6 +39,19 @@ h1 span{color:#6EA0FF}
 .ig{margin-top:26px;color:#C9D6EE;text-decoration:none;display:inline-flex;gap:8px;align-items:center;font-size:15px}
 .ig:hover{color:#fff}
 footer{margin-top:34px;font-size:12px;color:#7088B0}
+.sec{width:100%;max-width:760px;margin-top:56px;text-align:left}
+.sec h2{font-size:clamp(22px,5.5vw,30px);font-weight:800;text-align:center;margin-bottom:20px}
+.steps{list-style:none;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(110,160,255,.3);border-radius:16px;padding:16px}
+.steps li:before{content:counter(s);flex:0 0 34px;height:34px;border-radius:50%;background:#2563EB;font-weight:800;display:flex;align-items:center;justify-content:center}
+.steps b,.card b{display:block;margin-bottom:3px}
+.steps span,.card span{color:#C9D6EE;font-size:15px;line-height:1.45}
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(110,160,255,.3);border-radius:16px;padding:16px}
+.card i{font-style:normal;font-size:22px;display:block;margin-bottom:6px}
+.vs{margin-top:20px;text-align:center;font-size:clamp(16px,4.2vw,19px);color:#C9D6EE}
+.vs b{color:#6EA0FF}
 </style>
 </head>
 <body>
@@ -55,6 +68,27 @@ footer{margin-top:34px;font-size:12px;color:#7088B0}
 <p class="date">Aatham, 19 October, 12:39 PM IST</p>
 <p class="trial">🎁 15-day free trial</p>
 <a class="ig" href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Follow @soplus.in for updates</a>
+<section class="sec">
+<h2>How it works</h2>
+<ol class="steps">
+<li><div><b>Set up your profile once</b><span>Name, designation, district and taluka. SO+ fills them into every document.</span></div></li>
+<li><div><b>Pick the work and enter measurements</b><span>Choose the work type, village and lead distances, then type in the site measurements.</span></div></li>
+<li><div><b>SO+ prepares the sheets</b><span>Estimate, abstract, measurement and lead sheets are filled in for you.</span></div></li>
+<li><div><b>Download Excel + PDF</b><span>Ready to print and submit.</span></div></li>
+</ol>
+</section>
+<section class="sec">
+<h2>What you can make</h2>
+<div class="cards">
+<div class="card"><i>📐</i><b>Estimates</b><span>CC Road, Paver Block, Gutter Line and Pipe Line.</span></div>
+<div class="card"><i>🧾</i><b>Bills</b><span>21 No. P.A. Form, prepared from your work details.</span></div>
+<div class="card"><i>📒</i><b>Measurement Book (MB)</b><span>MB pages for your works, ready to print.</span></div>
+<div class="card"><i>✉️</i><b>Forwarding letters</b><span>To DEE R&amp;B, DEE Nani Sinchai and Audit.</span></div>
+<div class="card"><i>📍</i><b>Site measurement</b><span>Record measurements on site with GPS-tagged photos.</span></div>
+<div class="card"><i>🗓️</i><b>Tour diary</b><span>Keep your tour diary alongside your works.</span></div>
+</div>
+<p class="vs">Hours of retyping Excel sheets → <b>a few minutes with SO+</b></p>
+</section>
 <footer>SO+ · For Panchayat AAEs</footer>
 <script>
 (function(){
