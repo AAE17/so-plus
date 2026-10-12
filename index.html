@@ -52,6 +52,15 @@ footer{margin-top:34px;font-size:12px;color:#7088B0}
 .card i{font-style:normal;font-size:22px;display:block;margin-bottom:6px}
 .vs{margin-top:20px;text-align:center;font-size:clamp(16px,4.2vw,19px);color:#C9D6EE}
 .vs b{color:#6EA0FF}
+.ea{width:100%;max-width:440px;margin:28px auto 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;text-align:left}
+.ea h2{font-size:16px;line-height:1.45;font-weight:600;text-align:center;margin-bottom:14px}
+.ea label{display:block;font-size:12px;color:#9FB3D6;margin:10px 0 4px}
+.ea input,.ea select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#0B1F3A;color:#fff;font-size:16px}
+.ea .row{display:flex;gap:10px}.ea .row>div{flex:1}
+.ea .ck{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#dbe4f5;margin-top:12px}.ea .ck input{width:auto;margin-top:3px}
+.ea button{width:100%;margin-top:16px;background:#2563EB;color:#fff;border:0;border-radius:999px;padding:12px;font-size:16px;font-weight:600;cursor:pointer}
+.ea .msg{margin-top:12px;text-align:center;font-size:14px}
+footer a{color:#9FB3D6}
 </style>
 </head>
 <body>
@@ -89,7 +98,17 @@ footer{margin-top:34px;font-size:12px;color:#7088B0}
 </div>
 <p class="vs">Hours of retyping Excel sheets → <b>a few minutes with SO+</b></p>
 </section>
-<footer>SO+ · For Panchayat AAEs</footer>
+<form class="ea" id="ea" novalidate>
+<h2>Enter your Mobile Number and Official Email to get notified the moment we go live!</h2>
+<label>Name</label><input name="name" required maxlength="100" autocomplete="name">
+<label>Mobile</label><input name="mobile" required inputmode="numeric" maxlength="10" placeholder="10-digit mobile">
+<label>Official Email</label><input name="official_email" type="email" required>
+<div class="row"><div><label>Designation</label><select name="designation" required><option value="">Select</option><option>AAE</option><option>SO</option></select></div>
+<div><label>Batch</label><select name="batch" required><option value="">Select</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option></select></div></div>
+<div class="row"><div><label>Taluka</label><input name="taluka" required></div><div><label>District</label><input name="district" required></div></div>
+<label class="ck"><input type="checkbox" name="consent" required> SO+ launch ane updates mate mane contact kari shakay</label>
+<button type="submit">Get Early Access</button><div class="msg" id="eamsg"></div></form>
+<footer>SO+ · For Panchayat AAEs<br><a href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener">Instagram @soplus.in</a> · <a href="mailto:support@soplus.in">support@soplus.in</a><br>Only for verified Govt. AAE &amp; SO.</footer>
 <script>
 (function(){
 var T=Date.parse("2026-10-19T07:09:00Z"),done=false;
@@ -107,5 +126,15 @@ document.getElementById("s").textContent=p(s%60);
 tick();setInterval(tick,1000);
 })();
 </script>
+<script>(function(){var f=document.getElementById('ea'),m=document.getElementById('eamsg');
+var U='https://dmnoaosrdfvhqrkpgevz.supabase.co/rest/v1/early_access',K='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtbm9hb3NyZGZ2aHFya3BnZXZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk3MjM1NzksImV4cCI6MjEwNTI5OTU3OX0.LVhXk4O7eifzO3ufi08vatHbDUqNa2PpYc9xxwe2UnI';
+f.addEventListener('submit',function(e){e.preventDefault();var d=Object.fromEntries(new FormData(f));
+d.name=(d.name||'').trim();d.mobile=(d.mobile||'').replace(/\D/g,'');d.official_email=(d.official_email||'').trim().toLowerCase();d.taluka=(d.taluka||'').trim();d.district=(d.district||'').trim();
+var err=!d.name?'Name lakho':!/^[6-9]\d{9}$/.test(d.mobile)?'Valid 10-digit mobile lakho':!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.official_email)?'Valid email lakho':!d.designation?'Designation pasand karo':!d.batch?'Batch pasand karo':!d.taluka||!d.district?'Taluka ane District lakho':!d.consent?'Consent jaruri chhe':'';
+if(err){m.style.color='#FCA5A5';m.textContent=err;return}d.batch=+d.batch;d.consent=true;
+var b=f.querySelector('button');b.disabled=true;m.style.color='#fff';m.textContent='...';
+fetch(U,{method:'POST',headers:{apikey:K,Authorization:'Bearer '+K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify(d)})
+.then(function(r){if(!r.ok)throw 0;f.querySelectorAll('input,select,label,.row').forEach(function(x){x.style.display='none'});b.style.display='none';m.style.color='#86EFAC';m.textContent='Aabhar! 19 October e launch thata j tamne jaan karishu.'})
+.catch(function(){b.disabled=false;m.style.color='#FCA5A5';m.textContent='Submit na thayu, fari try karo.'})})})();</script>
 </body>
 </html>
