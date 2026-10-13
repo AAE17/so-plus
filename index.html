@@ -61,22 +61,64 @@ footer{margin-top:34px;font-size:12px;color:#7088B0}
 .ea button{width:100%;margin-top:16px;background:#2563EB;color:#fff;border:0;border-radius:999px;padding:12px;font-size:16px;font-weight:600;cursor:pointer}
 .ea .msg{margin-top:12px;text-align:center;font-size:14px}
 footer a{color:#9FB3D6}
+
+/* layout v2 */
+body{justify-content:flex-start;padding:18px 18px 10px}
+.wrap{width:100%;max-width:1400px;display:grid;grid-template-columns:1fr;gap:22px;align-items:center;flex:1}
+.hero{order:1;display:flex;flex-direction:column;align-items:center}
+.right{order:2}.left{order:3}
+.l{font-size:14px;color:#C9D6EE;font-weight:600;letter-spacing:.3px}
+footer{margin-top:22px;font-size:14px;color:#AFC1E0;line-height:1.6}
+footer a{color:#D6E2F7}
+.ea label{font-size:13px;color:#C9D6EE}
+.ea input::placeholder{color:#7F93B8}
+.ea select{appearance:none;-webkit-appearance:none;background:#0B1F3A url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239FB3D6' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center;padding-right:32px;line-height:1.25}
+.ea input,.ea select{height:44px}
+.ea .ck input{height:auto}
+.left .sec:first-child{margin-top:0}
+@media(min-width:1100px){
+html,body{height:100%}
+body{height:100vh;height:100dvh;min-height:0;overflow:hidden;padding:14px 24px 8px}
+.wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr) minmax(0,1fr);gap:26px;min-height:0}
+.hero,.left,.right{order:0}
+.logo{height:44px;margin-bottom:16px}
+h1{font-size:clamp(26px,2.6vw,38px);line-height:1.28}
+.sub{font-size:17px}
+.cd{margin:22px 0 14px}
+.n{font-size:clamp(40px,4.2vw,60px)}
+.trial{margin-top:14px}.ig{margin-top:14px}
+.sec{margin-top:16px}
+.sec h2{font-size:18px;margin-bottom:8px;text-align:left}
+.steps{grid-template-columns:1fr!important;gap:6px}
+.steps li{padding:8px 10px;gap:10px;border-radius:12px}
+.steps li:before{flex:0 0 26px;height:26px;font-size:13px}
+.steps b,.card b{font-size:14px;margin-bottom:1px}
+.steps span,.card span{font-size:12.5px;line-height:1.35}
+.cards{grid-template-columns:1fr 1fr!important;gap:6px}
+.card{padding:8px 10px;border-radius:12px}
+.card i{font-size:16px;margin-bottom:2px}
+.vs{margin-top:10px;font-size:14px;text-align:left}
+.ea{margin:0;padding:16px 18px;max-width:none}
+.ea h2{font-size:15px;margin-bottom:6px}
+.ea label{margin:7px 0 3px}
+.ea input,.ea select{height:38px;padding:7px 11px;font-size:15px}
+.ea .ck{margin-top:9px}
+.ea button{margin-top:11px;padding:10px}
+.ea .msg{margin-top:6px}
+footer{margin-top:8px;font-size:13px}
+}
+@media(min-width:1100px) and (max-height:820px){
+.logo{height:36px;margin-bottom:10px}
+.steps span{display:none}
+.card span{display:none}
+.cd{margin:18px 0 12px}
+.sec h2{font-size:16px}
+}
 </style>
 </head>
 <body>
-<img class="logo" src="assets/so-plus-logo-reversed.svg" alt="SO+">
-<h1><span>SO+</span> is coming.<br>Estimates, bills, MB and letters — in minutes.</h1>
-<p class="sub">Built for Gujarat Panchayat AAEs.</p>
-<div id="cd" class="cd" aria-live="polite">
-<div class="u"><div class="n" id="d">--</div><div class="l">Days</div></div>
-<div class="u"><div class="n" id="h">--</div><div class="l">Hours</div></div>
-<div class="u"><div class="n" id="m">--</div><div class="l">Minutes</div></div>
-<div class="u"><div class="n" id="s">--</div><div class="l">Seconds</div></div>
-</div>
-<div id="live" class="live" hidden>SO+ is live! Loading...</div>
-<p class="date">Aatham, 19 October, 12:39 PM IST</p>
-<p class="trial">🎁 15-day free trial</p>
-<a class="ig" href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Follow @soplus.in for updates</a>
+<div class="wrap">
+<aside class="side left">
 <section class="sec">
 <h2>How it works</h2>
 <ol class="steps">
@@ -98,17 +140,36 @@ footer a{color:#9FB3D6}
 </div>
 <p class="vs">Hours of retyping Excel sheets → <b>a few minutes with SO+</b></p>
 </section>
+</aside>
+<main class="hero">
+<img class="logo" src="assets/so-plus-logo-reversed.svg" alt="SO+">
+<h1><span>SO+</span> is coming.<br>Estimates, bills, MB and letters — in minutes.</h1>
+<p class="sub">Built for Gujarat Panchayat AAEs.</p>
+<div id="cd" class="cd" aria-live="polite">
+<div class="u"><div class="n" id="d">--</div><div class="l">Days</div></div>
+<div class="u"><div class="n" id="h">--</div><div class="l">Hours</div></div>
+<div class="u"><div class="n" id="m">--</div><div class="l">Minutes</div></div>
+<div class="u"><div class="n" id="s">--</div><div class="l">Seconds</div></div>
+</div>
+<div id="live" class="live" hidden>SO+ is live! Loading...</div>
+<p class="date">Aatham, 19 October, 12:39 PM IST</p>
+<p class="trial">🎁 15-day free trial</p>
+<a class="ig" href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Follow @soplus.in for updates</a>
+</main>
+<aside class="side right">
 <form class="ea" id="ea" novalidate>
 <h2>Enter your Mobile Number and Official Email to get notified the moment we go live!</h2>
-<label>Name</label><input name="name" required maxlength="100" autocomplete="name">
+<label>Name</label><input name="name" required maxlength="100" autocomplete="name" placeholder="Your full name">
 <label>Mobile</label><input name="mobile" required inputmode="numeric" maxlength="10" placeholder="10-digit mobile">
-<label>Official Email</label><input name="official_email" type="email" required>
+<label>Official Email</label><input name="official_email" type="email" required placeholder="name@gujarat.gov.in">
 <div class="row"><div><label>Designation</label><select name="designation" required><option value="">Select</option><option>AAE</option><option>SO</option></select></div>
 <div><label>Batch</label><select name="batch" required><option value="">Select</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2022</option><option>2024</option><option>2026</option></select></div></div>
-<div class="row"><div><label>Taluka</label><input name="taluka" required></div><div><label>District</label><input name="district" required></div></div>
+<div class="row"><div><label>Taluka</label><input name="taluka" required placeholder="Taluka"></div><div><label>District</label><input name="district" required placeholder="District"></div></div>
 <label class="ck"><input type="checkbox" name="consent" required> SO+ launch ane updates mate mane contact kari shakay</label>
 <button type="submit">Get Early Access</button><div class="msg" id="eamsg"></div></form>
-<footer>SO+ · For Panchayat AAEs<br><a href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener">Instagram @soplus.in</a> · <a href="mailto:support@soplus.in">support@soplus.in</a><br>Only for verified Govt. AAE &amp; SO.</footer>
+</aside>
+</div>
+<footer>SO+ · For Panchayat AAEs  ·  <a href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener">Instagram @soplus.in</a> · <a href="mailto:support@soplus.in">support@soplus.in</a>  ·  Only for verified Govt. AAE &amp; SO.</footer>
 <script>
 (function(){
 var T=Date.parse("2026-10-19T07:09:00Z"),done=false;
