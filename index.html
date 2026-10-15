@@ -172,7 +172,7 @@ footer{margin-top:8px;font-size:13px}
 <button type="submit">Get Early Access</button><div class="msg" id="eamsg"></div></form>
 </aside>
 </div>
-<footer>SO+ · For Panchayat AAEs  ·  <a href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener">Instagram @soplus.in</a> · <a href="mailto:support@soplus.in">support@soplus.in</a>  ·  Only for verified Govt. AAE &amp; SO.<br>© 2026 SO+ · Kunjal. All rights reserved. · <a href="https://app.soplus.in/signup.html#terms" target="_blank" rel="noopener">Terms</a></footer>
+<footer>SO+ · For Panchayat AAEs  ·  <a href="https://www.instagram.com/soplus.in/" target="_blank" rel="noopener">Instagram @soplus.in</a> · <a href="mailto:support@soplus.in">support@soplus.in</a>  ·  Only for verified Govt. AAE &amp; SO.<br>© 2026 SO+ · Kunjal. All rights reserved. · <a href="#terms" onclick="document.getElementById('terms').showModal();return false">Terms</a></footer>
 <script>
 (function(){
 var T=Date.parse("2026-10-19T07:09:00Z"),done=false;
@@ -200,5 +200,15 @@ var b=f.querySelector('button');b.disabled=true;m.style.color='#fff';m.textConte
 fetch(U,{method:'POST',headers:{apikey:K,Authorization:'Bearer '+K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify(d)})
 .then(function(r){if(!r.ok)throw 0;f.querySelectorAll('input,select,label,.row').forEach(function(x){x.style.display='none'});b.style.display='none';m.style.color='#86EFAC';m.textContent='Aabhar! 19 October e launch thata j tamne jaan karishu.'})
 .catch(function(){b.disabled=false;m.style.color='#FCA5A5';m.textContent='Submit na thayu, fari try karo.'})})})();</script>
+<dialog id="terms" style="max-width:560px;width:92%;border:1px solid #ccc;border-radius:12px;padding:20px;font-size:14px;line-height:1.5">
+<h3 style="margin-top:0">SO+ Terms (brief)</h3>
+<p>SO+ — its software, design, content, data structures, workflows and APIs — is the exclusive property of Kunjal (SO+). All rights reserved.</p>
+<p>You may not copy, clone, replicate, resell, or create a derivative or competing product based on SO+, in whole or in part.</p>
+<p>You may not reverse-engineer, decompile, scrape, or probe SO+ apps or APIs, or access them by any means other than the official interface.</p>
+<p>Access is only for verified Govt. AAE &amp; SO users. Violations may lead to account termination and legal action.</p>
+<p>Questions: <a href="mailto:support@soplus.in">support@soplus.in</a></p>
+<form method="dialog"><button>Close</button></form>
+</dialog>
+<script>if(location.hash==="#terms")document.getElementById("terms").showModal();</script>
 </body>
 </html>
