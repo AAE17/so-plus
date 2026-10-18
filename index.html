@@ -15,7 +15,7 @@
 <!--
   Page text comes from landing-text.txt. Edit that file (not this HTML), then run: node apply-text.js
   DRAFT landing page for SO+ (repo AAE17/estimate-mvp).
-  Sign up buttons go to https://app.soplus.in/signup.html and Log in to /login.html (owner change on GitHub, 6 Oct 2026).
+  Sign up buttons go to https://app.soplus.in/signup.html and Log in to https://app.soplus.in/login.html (updated 18 Oct 2026).
   Sign up / log in happens on the app's own login screen (no separate /signup route).
 -->
 <style>
@@ -196,6 +196,17 @@
   .final-box .cta-row{justify-content:center}
 
   /* Footer */
+  .more-h{margin:34px 0 14px;font-size:18px;font-weight:700;text-align:center}
+  .mini{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;list-style:none;padding:0;margin:0}
+  .mini li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;min-width:0}
+  .mini .tk{flex:none;width:22px;height:22px;border-radius:7px;background:var(--teal-50);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+  .mini b{display:block;font-size:14.5px;color:var(--ink)}
+  .mini span.t{display:block;font-size:13.5px;color:var(--ink-2);margin-top:2px;line-height:1.45}
+  @media (max-width:1080px){.mini{grid-template-columns:1fr 1fr}}
+  .soon{margin:18px auto 0;text-align:center;font-size:14.5px;color:var(--ink-2);max-width:760px}
+  .soon b{color:var(--blue)}
+  footer .legal{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 0;font-size:13.5px;color:#8fa3bf}
+  footer .legal b{color:#cbd5e1;font-weight:600}
   footer{background:var(--navy);color:#94a3b8;padding:44px 0 36px;font-size:14px}
   footer .row{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
   footer .brand{color:#fff}
@@ -209,6 +220,7 @@
   @media (max-width:980px){
     .hero .wrap,.who{grid-template-columns:1fr}
     .feat,.g3{grid-template-columns:1fr 1fr}
+    .mini{grid-template-columns:1fr 1fr}
     nav.links{display:none}
     .top .acts{margin-left:auto}
   }
@@ -233,6 +245,8 @@
     .fs-row{gap:10px;font-size:10px}
     .fs-para{font-size:8.5px}
     .feat{gap:12px}
+    .mini{grid-template-columns:1fr;gap:8px}
+    .mini li{padding:11px 14px}
     .feat .card{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:16px 18px}
     .feat .card .ic{grid-row:span 2}
     .feat .card h3{margin-top:0;font-size:16.5px}
@@ -284,7 +298,7 @@
         <a class="btn btn-primary" href="https://app.soplus.in/signup.html">Try it free for 15 days <span aria-hidden="true">→</span></a>
         <a class="btn btn-ghost" href="#sample">See a sample estimate</a>
       </div>
-      <p class="hero-note">Works in your browser on phone or computer. Nothing to install.</p>
+      <p class="hero-note">Works in your browser on phone or computer. Nothing to install. Free for 15 days, with instant access.</p>
       <ul class="types" aria-label="Work types">
         <li>CC Road</li><li>Paver Block</li><li>Gutter Line</li><li>Pipe Line</li><li>Bills &amp; MB</li><li>Forwarding letters</li>
       </ul>
@@ -349,7 +363,7 @@
       <div class="col after">
         <h3>With SO+ <span class="tag g">Automatic</span></h3>
         <ul>
-          <li>Start from a ready Taluka Panchayat-style format for each work type; you can modify it as per your need in the premium version</li>
+          <li>Start from a ready Taluka Panchayat-style format for each work type, or upload your own Excel format and our team sets it up for you</li>
           <li>SOR rates are already in, with item references shown</li>
           <li>Live total (with 18% GST) updates as you type measurements</li>
           <li>District, taluka, village and grant head filled in from lists</li>
@@ -410,7 +424,7 @@
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
         <h3>Gujarat locations &amp; grant heads</h3>
-        <p>District → taluka → village lists, plus grant heads such as 16th Finance Commission, 15% discretionary, ATVT, MP fund and DMF, written in Gujarati.</p>
+        <p>District → taluka → village lists, plus grant heads such as 15th and 16th Finance Commission (village, taluka and district level), 15% discretionary, ATVT, MP fund, DMF and more, written in Gujarati.</p>
       </div>
       <div class="card">
         <div class="ic t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h8"/></svg></div>
@@ -425,24 +439,38 @@
       <div class="card">
         <div class="ic t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></div>
         <h3>Forwarding letters</h3>
-        <p>Ready letters for DEE R&amp;B (Panchayat), DEE Nani Sinchai (Panchayat) and Audit.</p>
+        <p>Ready letters for DEE R&amp;B (Panchayat), DEE Nani Sinchai (Panchayat) and Audit. Put several works from one MB into a single letter.</p>
       </div>
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
         <h3>Site measurement</h3>
-        <p>Record actual site measurements with photos (GPS if allowed) and a site sketch, then print a rough bill (કાચું બિલ).</p>
+        <p>Record actual site measurements with photos (GPS if allowed) and a finger-drawn site sketch, then print a rough bill (કાચું બિલ).</p>
       </div>
       <div class="card">
         <div class="ic t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
         <h3>Work diary</h3>
-        <p>Keep a simple diary of daily site visits, meetings and leave.</p>
+        <p>Keep a daily diary of site visits, meetings and leave. Your estimates and bills for each day are counted for you.</p>
       </div>
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
         <h3>Phone or computer</h3>
-        <p>Runs in the browser. Forms are in Gujarati and English, and PDFs use a Gujarati font so text prints correctly.</p>
+        <p>Runs in the browser on any phone or computer. PDFs use a Gujarati font so text prints correctly.</p>
       </div>
     </div>
+    <h3 class="more-h">Also in SO+</h3>
+    <ul class="mini">
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Your own format</b><span class="t">Upload your office's Excel format; our team sets it up and makes it live.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Re-download any time</b><span class="t">Download past estimates and bills again, and make the PDF later.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Dashboard</b><span class="t">Today and total counts of your work, with sanctioned ₹ totals.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Diary auto-counts</b><span class="t">Each day's estimates and bills are counted; leave balance (CL, RH, EL and more) is kept.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Smart site measurement</b><span class="t">Averaged entry, contractor for each measurement, finger sketch and private GPS photos.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Many works, one letter</b><span class="t">Put several works into a single forwarding letter.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Profile auto-fill</b><span class="t">Your name, district, taluka and offices are printed on every estimate and bill.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Announcements</b><span class="t">In-app notices and maintenance alerts, so you know what is new.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Pipe sizes in mm or inch</b><span class="t">Enter pipe size the way your office writes it.</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>Your data stays private</b><span class="t">Other users cannot see your estimates, bills or site photos; photos open only through short-lived private links.</span></span></li>
+    </ul>
+    <p class="soon"><b>Coming soon:</b> more work types like Compound Wall, Bor Pumping Machinery and Mid Day Meal Shed.</p>
   </div>
 </section>
 
@@ -510,7 +538,7 @@
       </details>
       <details>
         <summary>How do I get an account?</summary>
-        <p>Tap <b>Sign up</b> and enter your email, a password, name, designation, mobile, district and taluka. New accounts are approved by the SO+ admin before first use.</p>
+        <p>Tap <b>Sign up</b> and enter your email, a password, name, designation, mobile, district and taluka. You can start using SO+ straight away: there is no approval wait during the 15-day free trial. After the trial, the SO+ admin activates your paid account.</p>
       </details>
       <details>
         <summary>Which SOR does SO+ use?</summary>
@@ -518,7 +546,7 @@
       </details>
       <details>
         <summary>Can I change a rate or quantity?</summary>
-        <p>Yes, in the downloaded Excel file. Change the value and the totals update. Rates cannot be edited inside the app yet.</p>
+        <p>Yes, in the downloaded Excel file. Change the value and the totals update. Rates cannot be edited inside the app yet, but you can upload your own Excel format and our team will set it up for your account.</p>
       </details>
       <details>
         <summary>Is the estimate ready to submit as-is?</summary>
@@ -527,6 +555,14 @@
       <details>
         <summary>Is SO+ an official government app?</summary>
         <p>No. SO+ is an independent tool made to help Taluka Panchayat engineers. It is not made or endorsed by the Government of Gujarat.</p>
+      </details>
+      <details>
+        <summary>What does the free trial include?</summary>
+        <p>For 15 days you can make up to 25 estimates, 25 bills and 25 kachu MB (કાચું બિલ) for each work type, plus 25 forwarding letters. After that, the app pauses until the admin activates your paid account.</p>
+      </details>
+      <details>
+        <summary>Can SO+ use my office's own Excel format?</summary>
+        <p>Yes. Any user can upload their own Excel format from the dashboard. Our team sets it up and makes it live for your account, and you can see its status in the app.</p>
       </details>
     </div>
   </div>
@@ -538,7 +574,7 @@
     <div class="final-box">
       <h2>Make your next estimate in minutes</h2>
       <p class="gu" lang="gu">આજે જ શરૂ કરો.</p>
-      <p class="l">Create your account, choose a work type and download your first Excel and PDF estimate.</p>
+      <p class="l">Create your account, choose a work type and download your first Excel and PDF estimate. Free for 15 days, no approval wait.</p>
       <div class="cta-row">
         <a class="btn btn-white" href="https://app.soplus.in/signup.html">Sign up free for 15 days</a>
         <a class="btn btn-outline-w" href="https://app.soplus.in/login.html">Log in</a>
@@ -558,11 +594,12 @@
         <a href="#features">Features</a>
         <a href="#outputs">Excel &amp; PDF</a>
         <a href="#faq">FAQ</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
+        <a href="https://app.soplus.in/signup.html#privacy">Privacy</a>
+        <a href="https://app.soplus.in/signup.html#terms">Terms</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
+    <p class="legal" id="contact"><span><b>Contact:</b> <a href="mailto:support@soplus.in">support@soplus.in</a></span><span><b>Phone:</b> <a href="tel:+919327561107">9327561107</a></span><span>© 2026 SO+. All rights reserved.</span></p>
     <p class="disc">SO+ is an independent drafting aid for Taluka Panchayat engineers in Gujarat. It is not affiliated with, approved or endorsed by the Government of Gujarat, GPSSB, the Panchayat department, R&amp;B or GWSSB. Rates and formats must be verified by the responsible engineer before use.</p>
   </div>
 </footer>
