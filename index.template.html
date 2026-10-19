@@ -15,7 +15,7 @@
 <!--
   Page text comes from landing-text.txt. Edit that file (not this HTML), then run: node apply-text.js
   DRAFT landing page for SO+ (repo AAE17/estimate-mvp).
-  Sign up buttons go to https://app.soplus.in/signup.html and Log in to /login.html (owner change on GitHub, 6 Oct 2026).
+  Sign up buttons go to https://app.soplus.in/signup.html and Log in to https://app.soplus.in/login.html (updated 18 Oct 2026).
   Sign up / log in happens on the app's own login screen (no separate /signup route).
 -->
 <style>
@@ -196,6 +196,17 @@
   .final-box .cta-row{justify-content:center}
 
   /* Footer */
+  .more-h{margin:34px 0 14px;font-size:18px;font-weight:700;text-align:center}
+  .mini{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;list-style:none;padding:0;margin:0}
+  .mini li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;min-width:0}
+  .mini .tk{flex:none;width:22px;height:22px;border-radius:7px;background:var(--teal-50);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+  .mini b{display:block;font-size:14.5px;color:var(--ink)}
+  .mini span.t{display:block;font-size:13.5px;color:var(--ink-2);margin-top:2px;line-height:1.45}
+  @media (max-width:1080px){.mini{grid-template-columns:1fr 1fr}}
+  .soon{margin:18px auto 0;text-align:center;font-size:14.5px;color:var(--ink-2);max-width:760px}
+  .soon b{color:var(--blue)}
+  footer .legal{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 0;font-size:13.5px;color:#8fa3bf}
+  footer .legal b{color:#cbd5e1;font-weight:600}
   footer{background:var(--navy);color:#94a3b8;padding:44px 0 36px;font-size:14px}
   footer .row{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
   footer .brand{color:#fff}
@@ -209,6 +220,7 @@
   @media (max-width:980px){
     .hero .wrap,.who{grid-template-columns:1fr}
     .feat,.g3{grid-template-columns:1fr 1fr}
+    .mini{grid-template-columns:1fr 1fr}
     nav.links{display:none}
     .top .acts{margin-left:auto}
   }
@@ -233,6 +245,8 @@
     .fs-row{gap:10px;font-size:10px}
     .fs-para{font-size:8.5px}
     .feat{gap:12px}
+    .mini{grid-template-columns:1fr;gap:8px}
+    .mini li{padding:11px 14px}
     .feat .card{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:16px 18px}
     .feat .card .ic{grid-row:span 2}
     .feat .card h3{margin-top:0;font-size:16.5px}
@@ -443,6 +457,20 @@
         <p>{{features.9_text}}</p>
       </div>
     </div>
+    <h3 class="more-h">{{more.headline}}</h3>
+    <ul class="mini">
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.1_title}}</b><span class="t">{{more.1_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.2_title}}</b><span class="t">{{more.2_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.3_title}}</b><span class="t">{{more.3_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.4_title}}</b><span class="t">{{more.4_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.5_title}}</b><span class="t">{{more.5_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.6_title}}</b><span class="t">{{more.6_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.7_title}}</b><span class="t">{{more.7_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.8_title}}</b><span class="t">{{more.8_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.9_title}}</b><span class="t">{{more.9_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.10_title}}</b><span class="t">{{more.10_text}}</span></span></li>
+    </ul>
+    <p class="soon">{{more.coming_soon}}</p>
   </div>
 </section>
 
@@ -528,6 +556,14 @@
         <summary>{{faq.q6}}</summary>
         <p>{{faq.a6}}</p>
       </details>
+      <details>
+        <summary>{{faq.q7}}</summary>
+        <p>{{faq.a7}}</p>
+      </details>
+      <details>
+        <summary>{{faq.q8}}</summary>
+        <p>{{faq.a8}}</p>
+      </details>
     </div>
   </div>
 </section>
@@ -558,11 +594,12 @@
         <a href="#features">{{footer.nav_features}}</a>
         <a href="#outputs">{{footer.nav_outputs}}</a>
         <a href="#faq">{{footer.nav_faq}}</a>
-        <a href="#privacy">{{footer.nav_privacy}}</a>
-        <a href="#terms">{{footer.nav_terms}}</a>
+        <a href="https://app.soplus.in/signup.html#privacy">{{footer.nav_privacy}}</a>
+        <a href="https://app.soplus.in/signup.html#terms">{{footer.nav_terms}}</a>
         <a href="#contact">{{footer.nav_contact}}</a>
       </nav>
     </div>
+    <p class="legal" id="contact"><span><b>{{footer.contact_label}}</b> <a href="mailto:{{footer.contact_email}}">{{footer.contact_email}}</a></span><span><b>{{footer.phone_label}}</b> <a href="tel:{{footer.phone_tel}}">{{footer.phone_number}}</a></span><span>{{footer.copyright}}</span></p>
     <p class="disc">{{footer.disclaimer}}</p>
   </div>
 </footer>
