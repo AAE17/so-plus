@@ -230,7 +230,7 @@ footer.nav_contact: Contact
 footer.contact_label: Contact:
 footer.contact_email: support@soplus.in
 footer.phone_label: Phone:
-footer.phone_number: 9327561107
-footer.phone_tel: +919327561107
+footer.phone_number: 7434097621
+footer.phone_tel: +917434097621
 footer.copyright: © 2026 SO+. All rights reserved.
 footer.disclaimer: SO+ is an independent drafting aid for Taluka Panchayat engineers in Gujarat. It is not affiliated with, approved or endorsed by the Government of Gujarat, GPSSB, the Panchayat department, R&B or GWSSB. Rates and formats must be verified by the responsible engineer before use.
