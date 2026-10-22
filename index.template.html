@@ -203,6 +203,8 @@
   .mini b{display:block;font-size:14.5px;color:var(--ink)}
   .mini span.t{display:block;font-size:13.5px;color:var(--ink-2);margin-top:2px;line-height:1.45}
   @media (max-width:1080px){.mini{grid-template-columns:1fr 1fr}}
+  @media (min-width:1081px){.mini.m4{grid-template-columns:repeat(4,1fr)}}
+  .wtypes{max-width:900px;margin:0 auto 18px;text-align:center;color:var(--ink-2);font-size:14.5px;line-height:1.7}
   .soon{margin:18px auto 0;text-align:center;font-size:14.5px;color:var(--ink-2);max-width:760px}
   .soon b{color:var(--blue)}
   footer .legal{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 0;font-size:13.5px;color:#8fa3bf}
@@ -471,6 +473,31 @@
       <li><span class="tk" aria-hidden="true">✓</span><span><b>{{more.10_title}}</b><span class="t">{{more.10_text}}</span></span></li>
     </ul>
     <p class="soon">{{more.coming_soon}}</p>
+  </div>
+</section>
+
+<!-- SO+ WORKS -->
+<section id="works" style="padding-top:0">
+  <div class="wrap">
+    <div class="center head">
+      <span class="eyebrow">{{works.eyebrow}}</span>
+      <h2>{{works.headline}}</h2>
+      <p class="sub-gu" lang="gu">{{works.gujarati_line}}</p>
+      <p class="lead">{{works.intro}}</p>
+    </div>
+    <h3 class="more-h">{{works.types_title}}</h3>
+    <p class="wtypes">{{works.types_list}}</p>
+    <ul class="mini m4">
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.1_title}}</b><span class="t">{{works.1_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.2_title}}</b><span class="t">{{works.2_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.3_title}}</b><span class="t">{{works.3_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.4_title}}</b><span class="t">{{works.4_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.5_title}}</b><span class="t">{{works.5_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.6_title}}</b><span class="t">{{works.6_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.7_title}}</b><span class="t">{{works.7_text}}</span></span></li>
+      <li><span class="tk" aria-hidden="true">✓</span><span><b>{{works.8_title}}</b><span class="t">{{works.8_text}}</span></span></li>
+    </ul>
+    <p class="soon">{{works.note}}</p>
   </div>
 </section>
 

@@ -98,8 +98,8 @@ how.step3_text: Save the estimate. It stays in My Estimates on the dashboard: op
 features.eyebrow: Features
 features.headline: Everything an AAE prepares for a small work
 features.intro: From the first estimate to the final bill, in one place.
-features.1_title: 20+ types of work
-features.1_text: CC Road, Paver Block, Gutter Line, Pipe Line, Compound Wall, Shed, Protection Wall, Bore and Pumping Machinery, Hand Pump, Havado, Room, Pipe and Box Culvert, Smashan, Toilet, RWH, Sump, Water Tank, Parab, Damar Road, and your own work.
+features.1_title: 22 types of work
+features.1_text: CC Road, Paver Block, Gutter Line, Pipe Line, Compound Wall, Shed (MDM), Protection Wall, Bore and Pumping Machinery, Hand Pump, Havado, Room, Culverts, Smashan, Toilet, RWH, Sump, Water Tank, Parab, Damar Road and more, plus your own work.
 features.2_title: SOR rates built in
 features.2_text: Items use R&B and GWSSB SOR rates (including 1% labour cess), set up for each district from the SOR users upload, and each item shows its SOR reference.
 features.3_title: Gujarat locations & grant heads
@@ -139,7 +139,32 @@ more.9_title: Pipe sizes in mm or inch
 more.9_text: Enter pipe size the way your office writes it.
 more.10_title: Your data stays private
 more.10_text: Other users cannot see your estimates, bills or site photos; photos open only through short-lived private links.
-more.coming_soon: *New:* My Formats, 20+ work types, three-sheet bills and photo stamps with GPS.
+more.coming_soon: *Now in SO+ Works:* Compound Wall, Bore and Pumping Machinery, Shed (MDM) and the other works that were coming soon. Is a work missing? Add it as Other in My Formats.
+
+=== 6c. SO+ WORKS (section after Features) ===
+works.eyebrow: SO+ Works
+works.headline: One estimate builder for every village work
+works.gujarati_line: દરેક કામ માટે એક જ એસ્ટિમેટ.
+works.intro: SO+ Works is the new estimate screen inside SO+. Set up the items of a work once in My Formats, then every estimate, site measurement, kachu MB and bill of that work follows them.
+works.types_title: 22 works ready to set up
+works.types_list: CC Road · Paver Block · Gutter Line · Pipe Line · Compound Wall · Shed (MDM) · Protection Wall · Bore and Pumping Machinery · Only Bore · Only Pumping Machinery · Hand Pump · Havado (Cattle Trough) · Room · Pipe Culvert · Box Culvert · Smashan · Toilet · Rain Water Harvesting · Sump · Water Tank · Parab · Damar Road · and Other (your own work)
+works.1_title: SOR of your district
+works.1_text: Upload your district SOR in My Formats; once the team sets it up, every user of the district uses it. Until then the Kheda R&B SOR 2024-25 is used.
+works.2_title: Your own items
+works.2_text: Add SOR items or a rate analysis (RA) item, choose For Record, add GST and change any rate.
+works.3_title: Office-style sheets
+works.3_text: Estimate (Face Sheet), Abstract, Measurement, Lead, and Testing, RA, Drawing and Site Plan sheets where needed.
+works.4_title: Site, MB and bill
+works.4_text: From the estimate to site measurement, kachu MB, and a bill with 21 No. P.A. Form and Completion Certificate.
+works.5_title: Forwarding letter
+works.5_text: Letters for DEE R&B, DEE Nani Sinchai and Audit, with the MB of each bill filled in.
+works.6_title: Diary and Agency hisab
+works.6_text: Daily diary, plus a hisab of the bills saved for each agency.
+works.7_title: Stamped site photos
+works.7_text: Photos carry taluka, village, work, GPS and date-time, and print in the MB.
+works.8_title: Made for the phone
+works.8_text: The screens fit a phone as well as a computer; Excel and PDF are made right in your browser.
+works.note: Every saved estimate stays on your dashboard, so you can open it, change it and download it again.
 
 === 7. OUTPUT FORMATS (Excel + PDF) ===
 outputs.eyebrow: Output formats
